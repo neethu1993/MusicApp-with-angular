@@ -1,0 +1,27 @@
+{{getMessage()}}
+<mat-grid-list cols="3" rowHeight="1:1"*ngIf="url">
+    <mat-grid-tile *ngFor="let search of url" max-width=500px >
+
+<mat-card class="example-card" max-height=250px>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    
+  </mat-card-header>
+  <img mat-card-image src={{search.imageurl}} width=100px height=200px>
+  <mat-card-title>{{search.trackName}}</mat-card-title>
+  <mat-card-content>
+    Artist: {{search.comment}}<app-update [url]=search.trackId></app-update>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <app-wishlist [name]=search.name [comment]=search.artist [id]=search.listeners [imageUrl]=searchComponent.getimage(search)></app-wishlist> -->
+    <button (click)=deleteTrack(search.trackId,search.trackName)>Delete</button>
+  </mat-card-actions>
+  <mat-card-actions >
+      <!-- <app-update [url]=search.trackId></app-update> -->
+      <!-- <app-wishlist [name]=search.name [comment]=search.artist [id]=search.listeners [imageUrl]=searchComponent.getimage(search)></app-wishlist> -->
+    </mat-card-actions>
+    
+</mat-card>
+</mat-grid-tile>
+
+</mat-grid-list>
