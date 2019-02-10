@@ -13,8 +13,9 @@
     Artist: {{search.artist}}
   </mat-card-content>
   <mat-card-actions>
+      <button mat-fab (click)="addList(search.name,search.artist,search.listeners,getimage(search))">ADD</button>
     <!-- <app-wishlist [name]=search.name [comment]=search.artist [id]=search.listeners [imageUrl]=searchComponent.getimage(search)></app-wishlist> -->
-    <button (click)="addList(search.name,search.artist,search.listeners,getimage(search))">Add to Wish List</button>
+    <!-- <button (click)="addList(search.name,search.artist,search.listeners,getimage(search))">Add to Wish List</button> -->
   </mat-card-actions>
 </mat-card>
 

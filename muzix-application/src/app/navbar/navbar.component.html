@@ -7,8 +7,16 @@
     <mat-toolbar-row>
        <span><a href="/">Muzix App</a></span>
        <span class="spacer"></span>
-       <a routerLink="/search">Search</a>
+       <input #newScenario type="text" placeholder="Search..">
+<button mat-raised-button color="primary" (click)="addScenario(newScenario.value); newScenario.value=''">Submit</button>
        <span class="spacer"></span>
-       <a routerLink="/wishlist">Wish List</a>
+       <!-- <button mat-fab (click)="loadWishList()">
+            <mat-icon aria-label="Example icon-button with a heart icon" color="accent">favorite</mat-icon>
+          </button> -->
+          <!-- <button mat-raised-button color="primary">Primary</button> -->
+       <button mat-raised-button color="primary" (click)="loadWishList()" routerLink="/card2">Wish List</button>
     </mat-toolbar-row>
  </mat-toolbar>
+ <app-card [url]=searchdata></app-card>
+ <app-card2 [url]=searchData></app-card2>
+ <app-footer></app-footer>

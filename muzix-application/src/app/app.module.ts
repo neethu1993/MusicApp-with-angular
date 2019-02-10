@@ -9,6 +9,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button'; 
+import {MatIconModule} from '@angular/material/icon';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -42,7 +44,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatDialogModule,
     FlexLayoutModule,
+    MatIconModule,
     MatGridListModule,
+    MatButtonModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: 'card', component: CardComponent },
