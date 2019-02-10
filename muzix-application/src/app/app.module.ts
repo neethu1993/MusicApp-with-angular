@@ -15,10 +15,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardComponent } from './card/card.component';
-import { WishlistComponent } from './wishlist/wishlist.component';
+
 import { Card2Component } from './card2/card2.component';
 import { UpdateComponent } from './update/update.component';
 import { FooterComponent } from './footer/footer.component';
@@ -26,10 +25,8 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
     NavbarComponent,
     CardComponent,
-    WishlistComponent,
     Card2Component,
     UpdateComponent,
     FooterComponent
@@ -50,9 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: 'card', component: CardComponent },
-      {path: 'card2', component: Card2Component},
-      {path: 'search', component: SearchComponent},
-      {path: 'wishlist', component: WishlistComponent}
+      {path: 'card2', component: Card2Component}
     
     ]),
   ],

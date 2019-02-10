@@ -1,22 +1,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="./app.component.css"> -->
-  <!-- <h1>Muzix App</h1> -->
+   crossorigin="anonymous">
 
-  <mat-toolbar color="Primary" >
-    <mat-toolbar-row>
-       <span><a href="/">Muzix App</a></span>
-       <span class="spacer"></span>
-       <input #newScenario type="text" placeholder="Search..">
-<button mat-raised-button color="primary" (click)="addScenario(newScenario.value); newScenario.value=''">Submit</button>
-       <span class="spacer"></span>
-       <!-- <button mat-fab (click)="loadWishList()">
-            <mat-icon aria-label="Example icon-button with a heart icon" color="accent">favorite</mat-icon>
-          </button> -->
-          <!-- <button mat-raised-button color="primary">Primary</button> -->
-       <button mat-raised-button color="primary" (click)="loadWishList()" routerLink="/card2">Wish List</button>
-    </mat-toolbar-row>
- </mat-toolbar>
- <app-card [url]=searchdata></app-card>
- <app-card2 [url]=searchData></app-card2>
- <app-footer></app-footer>
+<mat-toolbar color="Primary">
+   <mat-toolbar-row>
+      <span><a href="/">Muzix App</a></span>
+      <span class="spacer"></span>
+      <input #newScenario type="text" placeholder="Search..">
+      <button mat-raised-button color="primary" (click)="addScenario(newScenario.value); newScenario.value=''">Submit</button>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary" (click)="loadWishList()" routerLink="/card2">Wish List</button>
+   </mat-toolbar-row>
+</mat-toolbar>
+<app-card [url]=searchdata></app-card>
+<app-card2 [url]=searchData></app-card2>
+<app-footer></app-footer>
